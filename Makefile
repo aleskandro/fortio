@@ -96,7 +96,7 @@ FILES_WITH_IMAGE:= .circleci/config.yml Dockerfile Dockerfile.echosrv \
 	Dockerfile.test Dockerfile.fcurl release/Dockerfile.in Webtest.sh
 # then run make update-build-image and check the diff, etc... see release/README.md
 update-build-image:
-	docker pull ubuntu:focal
+	docker pull golang:1.17.8
 	$(MAKE) docker-push-internal IMAGE=.build TAG=$(BUILD_IMAGE_TAG)
 
 update-build-image-tag:
