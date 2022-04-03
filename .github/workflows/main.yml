@@ -51,7 +51,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x
           push: true
-          tags: fortio/fortio:${{ steps.build.outputs.VERSION }}, fortio/fortio:latest
+          tags: aleskandro/fortio:${{ steps.build.outputs.VERSION }}, aleskandro/fortio:latest
 
       - name: Create Release
         id: create_release

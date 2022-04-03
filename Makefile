@@ -6,7 +6,7 @@
 
 IMAGES=echosrv fcurl # plus the combo image / Dockerfile without ext.
 
-DOCKER_PREFIX := docker.io/fortio/fortio
+DOCKER_PREFIX := docker.io/aleskandro/fortio
 BUILD_IMAGE_TAG := v38
 BUILD_IMAGE := $(DOCKER_PREFIX).build:$(BUILD_IMAGE_TAG)
 
