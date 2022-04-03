@@ -3,7 +3,7 @@ FROM golang:1.17.8
 # Need gcc for -race test (and some linters though those work with CGO_ENABLED=0)
 RUN apt-get -y update && \
   apt-get --no-install-recommends -y upgrade && \
-  DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y install  libc6-dev apt-transport-https ssh \
+  DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y install libc6-dev apt-transport-https ssh \
   ruby-dev build-essential rpm gnupg zip netcat
 
 # Install FPM
