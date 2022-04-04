@@ -68,4 +68,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           tag_name="${GITHUB_REF##*/}"
-          hub release edit release/*.{tgz,zip} -m "" "$tag_name"
+          for f in release/*.{tgz,zip}
+          do
+            hub release edit -a $f -m "" "$tag_name"
+          done
+
